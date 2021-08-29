@@ -51,3 +51,10 @@ if (file_exists(APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php'))
 {
 	require APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php';
 }
+$routes->get('login', 'Home::login');
+$routes->get('inicio', 'Home::index');
+$routes->get('validar', 'Home::mostrar_validar');
+$routes->get('lobby', 'Home::ir');
+$routes->get('ir', 'Home::lobby');
+$routes->get('soy_turista', 'Home::Add_turista');
+$routes->get('soy_empresa', 'Home::Add_empresa');

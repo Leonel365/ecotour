@@ -47,7 +47,7 @@
 
 <p><br><br></p>
 <!--   Aqui inicia el contenido -->
-<div class="container">
+
   <div class="row">
       <div class="col-sm">
         <div class="text-right">
@@ -58,12 +58,54 @@
  
       </div>
 
+      <p><br><br></p>
+      <!--   Aqui inicia el contenido de los lugares -->
+      <div class="row">
       <div class="col-sm">
-      
-
+          <div class="text-center">
+            <p><b>Destinos en Córdoba</b></p>
+          </div>
+          <div class="text-center">
+            <p>
+            El departamento de Córdoba cuenta con una gran gama de escenarios propios para la práctica de turismo ecológico, distribuidos en diferentes ciudades municipios y pueblos de su territorio.
+            </p>
+          </div>
+          <p><br><br></p>
       </div>
 
+      </div>
+     
   </div>
 
 
-</div>
+
+  <div class="row">
+
+    <div class="col-sm">
+        <a href="#"> <img src="../public/carousel/img32.jpg"   width="500" height="445" alt="..."></a>
+    </div>
+
+    <div class="col-sm">
+          <div class="row">
+                    <div class="col-sm">
+                    <img src="../public/carousel/img32.jpg" width="200" height="200" alt="..."></a>
+                    </div>
+
+                    <div class="col-sm">
+                    <img src="../public/carousel/img32.jpg" width="200" height="200"  alt="..."></a>
+                    </div>
+          </div>
+      <p><br></p>
+          <div class="row">
+                    <div class="col-sm">
+                    <img src="../public/carousel/img32.jpg" width="200" height="200" alt="..."></a>
+                    </div>
+                    <div class="col-sm">
+                    <img src="../public/carousel/img32.jpg" width="200" height="200" alt="..."></a>
+                    </div>
+          </div>
+    </div>
+
+  </div>
+
+  <?=$pie?>
