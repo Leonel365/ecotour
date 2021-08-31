@@ -12,7 +12,7 @@
 <body style="background-color:#E3FFF8">
 
 <nav class="navbar navbar-expand-lg navbar-light"  style="background-color: #36907A">
-  <a class="navbar-brand logo" href="#"><img src="../public/fotografias/logo.png" alt="EcoTour"  width="100" height="100"></a>
+  <a class="navbar-brand logo" href="<?=Base_url('inicio')?>"><img src="../public/fotografias/logo.png" alt="EcoTour"  width="100" height="100"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>

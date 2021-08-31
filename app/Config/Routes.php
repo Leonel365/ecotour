@@ -58,3 +58,5 @@ $routes->get('lobby', 'Home::ir');
 $routes->get('ir', 'Home::lobby');
 $routes->get('soy_turista', 'Home::Add_turista');
 $routes->get('soy_empresa', 'Home::Add_empresa');
+$routes->post('guardar_turista', 'Turistas::guardar_turistas');
+$routes->post('guardar_agencia', 'Proveedores::guardar_empresas');

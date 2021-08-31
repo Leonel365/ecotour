@@ -64,7 +64,7 @@
 
 <form method="POST" action="validar_login.php">
     <div class="form-group">
-        <label for="user">Nombre de Usuario:</label>
+        <label for="user">Correo:</label>
         <input id="user" type="text" name="user" class="form-control">
     </div>
     <div class="form-group">
