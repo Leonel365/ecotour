@@ -63,7 +63,7 @@ class Turistas extends Controller{
          }   
          
     
-      return $this->response->redirect(Base_url('/login'));  
+      return $this->response->redirect(site_url('login/1'));  
 
     }
 

@@ -57,7 +57,7 @@ class Proveedores extends Controller{
          }   
          
     
-      return $this->response->redirect(Base_url('/login'));  
+      return $this->response->redirect(Base_url('/login/2'));  
 
     }
 }

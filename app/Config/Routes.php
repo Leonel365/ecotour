@@ -51,12 +51,17 @@ if (file_exists(APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php'))
 {
 	require APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php';
 }
-$routes->get('login', 'Home::login');
+$routes->get('login/(:num)', 'Home::login/$1');
 $routes->get('inicio', 'Home::index');
-$routes->get('validar', 'Home::mostrar_validar');
-$routes->get('lobby', 'Home::ir');
+$routes->get('validar/(:num)', 'Home::mostrar_validar/$1');
+$routes->post('validar_user', 'Home::validar');
+$routes->get('lobby', 'Home::ir/$1');
+$routes->get('lobby_login', 'Home::ir_lobby');
 $routes->get('ir', 'Home::lobby');
 $routes->get('soy_turista', 'Home::Add_turista');
 $routes->get('soy_empresa', 'Home::Add_empresa');
+$routes->get('menu_turista', 'Home::ir_turista');
+$routes->get('menu_empresa', 'Home::ir_empresa');
+$routes->get('salir', 'Home::cerrar_sesion');
 $routes->post('guardar_turista', 'Turistas::guardar_turistas');
 $routes->post('guardar_agencia', 'Proveedores::guardar_empresas');
