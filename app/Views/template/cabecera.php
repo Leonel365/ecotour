@@ -9,10 +9,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
     <title>Ecotour</title>
 </head>
-<body style="background-color:#E3FFF8">
+<body >
 
 <nav class="navbar navbar-expand-lg navbar-light"  style="background-color: #36907A">
-  <a class="navbar-brand logo" href="<?=Base_url('inicio')?>"><img src="../public/fotografias/logo.png" alt="EcoTour"  width="100" height="100"></a>
+  <a class="navbar-brand logo" href="<?=Base_url('inicio')?>"><img src="../public/fotografias/logo.png" alt="EcoTour"  width="50" height="50"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -22,7 +22,7 @@
         <a class="nav-link" href="<?=Base_url('inicio')?>"><b style="color:  #FDFEFE">Inicio</b> <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#"><b style="color:  #FDFEFE">Bioturismo</b></a>
+        <a class="nav-link" href="<?=Base_url('biotour')?>"><b style="color:  #FDFEFE">Bioturismo</b></a>
       </li>
       </ul>
      

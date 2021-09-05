@@ -13,7 +13,7 @@ class Proveedores extends Controller{
         $email= $this->request->getVar('email');
         $telefono= $this->request->getVar('telefono');
         $tipo= $this->request->getVar('tipo');
-        $contrasena= sha1($this->request->getVar('contrasena'));
+        $contrasena= sha1($this->request->getVar('contasena'));
 
         $validation = $this->validate([
             'razon_social' => 'required|min_length[1]',

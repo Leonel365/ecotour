@@ -15,23 +15,23 @@
     </div>
 
     <div class="carousel-item">
-    <img src="../public/carousel/img2.jpeg" height="400" class="d-block w-100" alt="...">
+    <img src="../public/carousel/img2.jpg" height="400" class="d-block w-100" alt="...">
     </div>
 
     <div class="carousel-item">
-    <img src="../public/carousel/img3.jpeg" height="400" class="d-block w-100" alt="...">
+    <img src="../public/carousel/img3.jpg" height="400" class="d-block w-100" alt="...">
     </div>
 
     <div class="carousel-item">
-    <img src="../public/carousel/img20.jpeg" height="400" class="d-block w-100" alt="...">
+    <img src="../public/carousel/img20.jpg" height="400" class="d-block w-100" alt="...">
     </div>
 
     <div class="carousel-item">
-    <img src="../public/carousel/img24.jpeg" height="400" class="d-block w-100" alt="...">
+    <img src="../public/carousel/img24.jpg" height="400" class="d-block w-100" alt="...">
     </div>
 
     <div class="carousel-item">
-    <img src="../public/carousel/img31.jpeg" height="400" class="d-block w-100" alt="...">
+    <img src="../public/carousel/img31.jpg" height="400" class="d-block w-100" alt="...">
     </div>
 
   </div>
@@ -82,26 +82,26 @@
   <div class="row">
 
     <div class="col-sm">
-        <a href="#"> <img src="../public/carousel/img32.jpg"   width="500" height="445" alt="..."></a>
+        <a href="#"> <img src="../public/carousel/img33.jpg"  class="rounded" width="500" height="445" alt="..."></a>
     </div>
 
     <div class="col-sm">
           <div class="row">
                     <div class="col-sm">
-                    <img src="../public/carousel/img32.jpg" width="200" height="200" alt="..."></a>
+                    <img src="../public/carousel/img34.jpg" class="rounded" width="200" height="200" alt="..."></a>
                     </div>
 
                     <div class="col-sm">
-                    <img src="../public/carousel/img32.jpg" width="200" height="200"  alt="..."></a>
+                    <img src="../public/carousel/img35.jpg" class="rounded" width="200" height="200"  alt="..."></a>
                     </div>
           </div>
       <p><br></p>
           <div class="row">
                     <div class="col-sm">
-                    <img src="../public/carousel/img32.jpg" width="200" height="200" alt="..."></a>
+                    <img src="../public/carousel/img36.jpg" class="rounded" width="200" height="200" alt="..."></a>
                     </div>
                     <div class="col-sm">
-                    <img src="../public/carousel/img32.jpg" width="200" height="200" alt="..."></a>
+                    <img src="../public/carousel/img37.jpg" class="rounded" width="200" height="200" alt="..."></a>
                     </div>
           </div>
     </div>

@@ -44,7 +44,7 @@
         <input id="imagen" class="form-control" name="imagen" type="file">
         </div>
         <div class="form-group col-md">
-        <label for="contasena">Contrasena *:</label>
+        <label for="contasena">Contraseña *:</label>
         <input id="contasena" placeholder="Defina una contraseña para el inicio de sesión" class="form-control" name="contasena" type="password">
         </div>
 

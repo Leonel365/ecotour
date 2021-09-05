@@ -20,7 +20,6 @@
    if(session('mensaje')){
     $tipo = session('mensaje');
        ?>
-     
         <script>
         Swal.fire({
             icon: 'error',
@@ -32,7 +31,7 @@
 <?php
    } ?>
 
-<form method="POST" action="<?=site_url('validar_user')?>">
+<form method="POST" action="<?=Base_url('validar_user')?>">
 
         <input type="hidden" name="tipo" value="<?=$tipo?>">
         
@@ -47,7 +46,7 @@
  
     <div class="text-center">
         <div class="text-center">
-            <a href="<?=site_url('lobby/1')?>"><b>¿Aún no tienens una cuenta?</b></a>
+            <a href="<?=Base_url('lobby')?>"><b>¿Aún no tienens una cuenta?</b></a>
         </div>
         <br>
         <input type="submit" class="btn" style="background-color: #36907A" value="Login">

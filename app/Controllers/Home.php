@@ -60,7 +60,7 @@ class Home extends BaseController
 		return view('empresa/inicio', $datos);
  
 	}
-
+	
 	public function lobby()
 	{
 		$datos['cabecera'] = view('template/cabecera');
@@ -94,7 +94,7 @@ class Home extends BaseController
 
 	public function validar(){
 	
-
+		$db = \Config\Database::connect();
 		$proveedor = new Proveedor();
 		$turista = new Turista();
 
@@ -105,27 +105,33 @@ class Home extends BaseController
 	
 		$sw=0;
 	if($tipo==1){
-			$user_activo = $turista->where('usuario',$usario)->findAll();
-			$contraseña = $turista->where('cotrasena',$password)->findAll();
+		
+		$sql = "SELECT usuario, cotrasena FROM turista WHERE usuario = '$usario' and cotrasena = '$password' ";
+		$query = $db->query($sql);
+		$results = $query->getResultArray();
 
-			if(isset($user_activo) and isset($contraseña)){
-					$sw=1;
-			}
+foreach ($results as $row)
+{
+	$sw=1;
+   
+}
 		
 	}else{
 	
-			$user_activo = $proveedor->where('usuario',$usario)->findAll();
-			$contraseña = $proveedor->where('contrasena',$password)->findAll();
-			
+		$sql = "SELECT usuario, contrasena FROM proveedores WHERE usuario = '$usario' and contrasena = '$password' ";
+		$query = $db->query($sql);
+		$results = $query->getResultArray();
 
-			if(isset($user_activo) and isset($contraseña)){
-					$sw=2;
+			foreach ($results as $row)
+			{
+				$sw=2;
+			
 			}
 		
 	}
 			if($sw==0){
 			 $session = session();
-            $session->setFlashdata('mensaje',$tipo);
+            $session->setFlashdata('mensaje','ERROR');
             return redirect()->back()->withInput();
 			}
 			if($sw==1){
@@ -151,17 +157,43 @@ class Home extends BaseController
 		<?php
 			}
 		
-	
-	
-	
-		
-	
-	
-	
-	
-	
+	}
+	public function formulario_plan()
+	{
+		$datos['cabecera'] = view('template/menu_empresa');
+		$datos['pie'] = view('template/footer');
+		return view('empresa/Add_plan', $datos);
+ 
+	}
+	public function catalogo()
+	{
+		$datos['cabecera'] = view('template/menu_empresa');
+		$datos['pie'] = view('template/footer');
+		return view('empresa/catalogo', $datos);
+ 
+	}
+	public function bioturismo()
+	{
+		$datos['cabecera'] = view('template/menu_empresa');
+		$datos['pie'] = view('template/footer');
+		return view('empresa/bioturismo', $datos);
+ 
 	}
 
+	public function biotour()
+	{
+		$datos['cabecera'] = view('template/cabecera');
+		$datos['pie'] = view('template/footer');
+		return view('bioturismo', $datos);
+ 
+	}
+	public function biotour_t()
+	{
+		$datos['cabecera'] = view('template/menu_turista');
+		$datos['pie'] = view('template/footer');
+		return view('turistas/bioturismo', $datos);
+ 
+	}
 
 
 }

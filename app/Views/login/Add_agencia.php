@@ -5,7 +5,7 @@
     <div class="form-row">
         <div class="form-group col-md">
         <label for="razon_social">Razon social *:</label>
-        <input id="razon_social" value ="<?=old('')?>" class="form-control" name="razon_social" type="text">
+        <input id="razon_social" value ="<?=old('razon_social')?>" class="form-control" name="razon_social" type="text">
         </div>
         
         
@@ -23,12 +23,12 @@
     <div class="form-row">
         <div class="form-group col-md-8">
         <label for="email">Dirreción de correo electronico *:</label>
-        <input id="email"placeholder="MiCorreo@example.com" value ="<?=old('')?>" class="form-control" name="email" type="email">
+        <input id="email"placeholder="MiCorreo@example.com" value ="<?=old('email')?>" class="form-control" name="email" type="email">
         </div>
 
         <div class="form-group col-md-4">
         <label for="telefono">Nro. telefono:</label>
-        <input id="telefono" value ="<?=old('')?>" class="form-control" name="telefono" type="text">
+        <input id="telefono" value ="<?=old('telefono')?>" class="form-control" name="telefono" type="text">
         </div>
        
 
@@ -40,7 +40,7 @@
         <input id="imagen" class="form-control" name="imagen" type="file">
         </div>
         <div class="form-group col-md">
-        <label for="contasena">Contrasena *:</label>
+        <label for="contasena">Contraseña *:</label>
         <input id="contasena" placeholder="Defina una contraseña para el inicio de sesión" class="form-control" name="contasena" type="password">
         </div>
 

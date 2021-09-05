@@ -16,7 +16,8 @@ class Turistas extends Controller{
         $s_apellido= $this->request->getVar('s_apellido');
         $email= $this->request->getVar('email');
         $telefono= $this->request->getVar('telefono');
-        $contrasena= sha1($this->request->getVar('contrasena'));
+        $con = $this->request->getVar('contasena');
+        $contrasena= sha1($con);
 
         $validation = $this->validate([
             'p_nombre' => 'required|min_length[1]',
