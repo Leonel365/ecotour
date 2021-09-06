@@ -67,5 +67,32 @@ class Turistas extends Controller{
       return $this->response->redirect(site_url('login/1'));  
 
     }
+    public function mirar_categoria($cat)
+	{
+		if($cat==1){
+			$categoria = "atardecer";
+		}else if($cat==2){
+			$categoria = "caminatas";
+		}else if($cat==3){
+			$categoria = "pareja";
+		}else if($cat==4){
+			$categoria = "naturaleza";
+		}else if($cat==5){
+			$categoria = "animal";
+		}
+		else if($cat==6){
+			$categoria = "agua";
+		}
+
+
+		$db = \Config\Database::connect();
+	
+		$datos['sql'] = "SELECT idLugar_Turistico, nombre, descripcion FROM lugar_turistico WHERE categoria LIKE '$categoria' ";
+		
+    
+		$datos['pie'] = view('template/footer');
+		return view('turistas/mostrar_cat', $datos);
+ 
+	}
 
 }

@@ -28,6 +28,7 @@ foreach ($results as $row)
         $ciudad= $this->request->getVar('ciudad');
         $vereda= $this->request->getVar('vereda');
         $calle = $this->request->getVar('calle');
+        $categoria = $this->request->getVar('categoria');
 
 
         $validation = $this->validate([
@@ -60,7 +61,7 @@ foreach ($results as $row)
          
        
                
-           $sql = "INSERT INTO lugar_turistico(nombre, descripcion) VALUES ('$nombre_lugar','$descripcion')";
+           $sql = "INSERT INTO lugar_turistico(nombre, descripcion, categoria) VALUES ('$nombre_lugar','$descripcion', '$categoria')";
            $query = $db->query($sql);
           
            $sql = "SELECT MAX(idLugar_Turistico) AS id FROM lugar_turistico";

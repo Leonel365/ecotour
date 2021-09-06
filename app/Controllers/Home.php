@@ -195,5 +195,91 @@ foreach ($results as $row)
  
 	}
 
+	public function buscar()
+	{
+		$db = \Config\Database::connect();
+		$busqueda = $this->request->getVar('buscar');
+		$datos['sql'] = "SELECT idLugar_Turistico, nombre, descripcion FROM lugar_turistico WHERE nombre LIKE '%$busqueda%' ";
+		
+
+		$datos['cabecera'] = view('template/cabecera');
+		$datos['pie'] = view('template/footer');
+		return view('template/busqueda', $datos);
+ 
+	}
+	public function buscar_t()
+	{
+		$db = \Config\Database::connect();
+		$busqueda = $this->request->getVar('buscar');
+		$datos['sql'] = "SELECT idLugar_Turistico, nombre, descripcion FROM lugar_turistico WHERE nombre LIKE '%$busqueda%' ";
+		
+
+		$datos['cabecera'] = view('template/menu_turista');
+		$datos['pie'] = view('template/footer');
+		return view('template/busqueda', $datos);
+ 
+	}
+	public function buscar_e()
+	{
+		$db = \Config\Database::connect();
+		$busqueda = $this->request->getVar('buscar');
+		$datos['sql'] = "SELECT idLugar_Turistico, nombre, descripcion FROM lugar_turistico WHERE nombre LIKE '%$busqueda%' ";
+		
+
+		$datos['cabecera'] = view('template/menu_empresa');
+		$datos['pie'] = view('template/footer');
+		return view('template/busqueda', $datos);
+ 
+	}
+	public function categorias()
+	{
+		$datos['cabecera'] = view('template/cabecera');
+		$datos['pie'] = view('template/footer');
+		return view('categorias', $datos);
+ 
+	}
+	public function categorias_e()
+	{
+		$datos['cabecera'] = view('template/menu_empresa');
+		$datos['pie'] = view('template/footer');
+		return view('empresa/categorias', $datos);
+ 
+	}
+	public function categorias_t()
+	{
+		$datos['cabecera'] = view('template/menu_turista');
+		$datos['pie'] = view('template/footer');
+		return view('turistas/categorias', $datos);
+ 
+	}
+
+	public function mirar_categoria($cat)
+	{
+		if($cat==1){
+			$categoria = "atardecer";
+		}else if($cat==2){
+			$categoria = "caminatas";
+		}else if($cat==3){
+			$categoria = "pareja";
+		}else if($cat==4){
+			$categoria = "naturaleza";
+		}else if($cat==5){
+			$categoria = "animal";
+		}
+		else if($cat==6){
+			$categoria = "agua";
+		}
+
+
+		$db = \Config\Database::connect();
+	
+		$datos['sql'] = "SELECT idLugar_Turistico, nombre, descripcion FROM lugar_turistico WHERE categoria LIKE '$categoria' ";
+		
+
+		$datos['pie'] = view('template/footer');
+		return view('mostrar_cat', $datos);
+ 
+	}
+
 
 }

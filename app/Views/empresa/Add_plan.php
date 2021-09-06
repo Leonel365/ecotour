@@ -17,14 +17,26 @@
         <input id="precio" value ="<?=old('precio')?>" class="form-control" name="precio" type="text">
         </div>
         <div class="form-group col-md">
-        <label for="departamento">Departamento *:</label>
-        <input id="departamento" value ="<?=old('departamento')?>" class="form-control" name="departamento" type="text">
-        </div>
+        <label for="categoria">Categoria *:</label>
+        <select class="custom-select mr-sm-2" id="categoria" name = "categoria">
+        <option selected>Seleccione...</option>
+        <option value="atardecer">Atarcedecer en Familia</option>
+        <option value="caminatas">Caminatas y aire fresco</option>
+        <option value="pareja">Plan en pareja</option>
+        <option value="naturaleza">Naturaleza y comida</option>
+        <option value="animal">Contacto animal</option>
+        <option value="agua">Cerca del agua</option>
+    </select>
+      </div>
            
 
     </div>
 
     <div class="form-row">
+    <div class="form-group col-md">
+        <label for="departamento">Departamento *:</label>
+        <input id="departamento" value ="<?=old('departamento')?>" class="form-control" name="departamento" type="text">
+        </div>
     <div class="form-group col-md">
         <label for="ciudad">Ciudad *:</label>
         <input id="ciudad" value ="<?=old('ciudad')?>" class="form-control" name="ciudad" type="text">
