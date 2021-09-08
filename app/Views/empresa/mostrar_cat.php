@@ -112,7 +112,7 @@ $db = \Config\Database::connect();
      ?>
      <div class="card" style="width: 18rem;">
    <?php  echo "<p style = 'text-align: center'><b>$nombre</b></p>"; ?>
-     <img src="<?=base_url()?>/fotografias/<?=$foto?>" class="card-img-top"  height="150" width="235" alt="portada del libro">
+   <a href="<?=Base_url('lugar_e/'.$id_lugar)?>"><img src="<?=base_url()?>/fotografias/<?=$foto?>" class="card-img-top"  height="150" width="235" alt="portada del libro"></a>
          <div class="card-body">
       <?php   echo "<p style = 'text-align: justify'>".substr($descripcion, 0, 100)."...</p>"; ?>
          </div>

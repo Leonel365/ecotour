@@ -90,4 +90,32 @@ foreach ($results as $row)
 
 
     }
+
+
+    public function mostrar_lugar($id_lugar){
+
+        $datos['sql'] =  "SELECT idLugar_Turistico, nombre, descripcion FROM lugar_turistico WHERE idLugar_Turistico = $id_lugar ";
+
+        $datos['cabecera'] = view('template/cabecera');
+		$datos['pie'] = view('template/footer');
+		return view('lugar', $datos);
+}
+
+public function mostrar_lugar_t($id_lugar){
+
+    $datos['sql'] =  "SELECT idLugar_Turistico, nombre, descripcion FROM lugar_turistico WHERE idLugar_Turistico = $id_lugar ";
+
+    $datos['cabecera'] = view('template/menu_turista');
+    $datos['pie'] = view('template/footer');
+    return view('lugar', $datos);
+}
+public function mostrar_lugar_e($id_lugar){
+
+    $datos['sql'] =  "SELECT idLugar_Turistico, nombre, descripcion FROM lugar_turistico WHERE idLugar_Turistico = $id_lugar ";
+
+    $datos['cabecera'] = view('template/menu_empresa');
+    $datos['pie'] = view('template/footer');
+    return view('lugar', $datos);
+}
+
 }

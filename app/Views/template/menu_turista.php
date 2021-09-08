@@ -25,7 +25,7 @@ session_start();
 
 ?>
 <nav class="navbar navbar-expand-lg navbar-light"  style="background-color: #36907A">
-  <a class="navbar-brand logo" href="<?=Base_url('menu_turista')?>"><img src="../public/fotografias/logo.png" alt="EcoTour"  width="85" height="85"></a>
+  <a class="navbar-brand logo" href="<?=Base_url('menu_turista')?>"><img src="<?=base_url()?>/fotografias/logo.png" alt="EcoTour"  width="85" height="85"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>

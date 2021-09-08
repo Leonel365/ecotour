@@ -80,3 +80,7 @@ $routes->get('categorias_t', 'Home::categorias_t');
 $routes->get('mirar_categoria/(:num)', 'Home::mirar_categoria/$1');
 $routes->get('mirar_categoria_e/(:num)', 'Proveedores::mirar_categoria/$1');
 $routes->get('mirar_categoria_t/(:num)', 'Turistas::mirar_categoria/$1');
+$routes->get('lugar/(:num)', 'Planes_turisticos::mostrar_lugar/$1');
+$routes->get('lugar_t/(:num)', 'Planes_turisticos::mostrar_lugar_t/$1');
+$routes->get('lugar_e/(:num)', 'Planes_turisticos::mostrar_lugar_e/$1');
+
