@@ -118,4 +118,13 @@ public function mostrar_lugar_e($id_lugar){
     return view('lugar', $datos);
 }
 
+public function agendar($id_lugar){
+
+   
+    $datos['cabecera'] = view('template/menu_turista');
+    $datos['pie'] = view('template/footer');
+    $datos['id_lugar'] = $id_lugar;
+    return view('turistas/reserva', $datos);
+}
+
 }

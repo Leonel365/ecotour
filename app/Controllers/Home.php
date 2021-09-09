@@ -280,6 +280,28 @@ foreach ($results as $row)
 		return view('mostrar_cat', $datos);
  
 	}
+	public function buscar_oferta()
+	{
+		session_start();
+		$db = \Config\Database::connect();
+		$fecha= $this->request->getVar('fecha_ida');
+        $dinero= $this->request->getVar('presupuesto');
+		$id_lugar= $this->request->getVar('id_lugar');
+		$correo = $_SESSION['usuario'];
+			$sql = "SELECT idTurista FROM turista WHERE usuario = '$correo'"; 
+			$query = $db->query($sql);
+			$results = $query->getResultArray();
+			foreach($results as $row ){
+				$id_turista=$row['idTurista'];   
+			}
+        $validation = $this->validate([
+            'fecha_ida' => 'required|min_length[1]',
+            'presupuesto' => 'required|min_length[1]',
+            
+        ]);
+		echo $fecha ."<br>".$dinero ."<br>". $id_turista."<br> id_lugar: ".$id_lugar;
+ 
+	}
 
 
 }
