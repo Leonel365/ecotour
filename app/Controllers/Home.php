@@ -294,12 +294,68 @@ foreach ($results as $row)
 			foreach($results as $row ){
 				$id_turista=$row['idTurista'];   
 			}
-        $validation = $this->validate([
-            'fecha_ida' => 'required|min_length[1]',
-            'presupuesto' => 'required|min_length[1]',
-            
-        ]);
-		echo $fecha ."<br>".$dinero ."<br>". $id_turista."<br> id_lugar: ".$id_lugar;
+      
+			$sql = "SELECT idPlan_Turistico FROM plan_turistico WHERE idLugar_Turistico = $id_lugar"; 
+			$query = $db->query($sql);
+			$results = $query->getResultArray();
+			foreach($results as $row ){
+				$id_plan=$row['idPlan_Turistico'];   
+			}
+
+			$sql = "INSERT INTO notificaciones(idPlan_Turistico, idTurista, fecha_ida, presupuesto) VALUES ('$id_plan','$id_turista','$fecha','$dinero')";
+			$query = $db->query($sql);
+			echo "procesando...";
+			?>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css">
+		<script>
+			Swal.fire({
+			position: 'top',
+			icon: 'success',
+			title: 'Su solicitud fue radicada exitosamente.',
+			footer: 'Puede consultar esta solicituen en la opción - <b> Mis ofertas</b>',
+			showConfirmButton: true,
+		
+			}).then((result) => {
+  if (result.isConfirmed) {
+	window.history.back();
+  }
+})
+		</script>
+			<?php
+
+	
+ 
+	}
+
+	public function mis_lugares()
+	{
+		session_start();
+		$db = \Config\Database::connect();
+		$correo = $_SESSION['usuario'];
+			$sql = "SELECT idTurista FROM turista WHERE usuario = '$correo'"; 
+			$query = $db->query($sql);
+			$results = $query->getResultArray();
+			foreach($results as $row ){
+				$id_turista=$row['idTurista'];   
+			}
+      
+			$datos['sql']  = "SELECT idPlan_Turistico, fecha_ida, presupuesto FROM notificaciones WHERE idTurista = $id_turista"; 
+			
+			$datos['cabecera'] = view('template/menu_turista');
+			$datos['pie'] = view('template/footer');
+			return view('turistas/mis_lugares', $datos);
+ 
+	}
+	public function mis_solicitudes()
+	{
+		session_start();
+		$db = \Config\Database::connect();
+	
+			$datos['cabecera'] = view('template/menu_empresa');
+			$datos['pie'] = view('template/footer');
+			return view('empresa/mis_solicitudes', $datos);
  
 	}
 

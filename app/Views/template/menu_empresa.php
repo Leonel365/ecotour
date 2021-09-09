@@ -38,10 +38,21 @@ session_start();
         <a class="nav-link" href="<?=Base_url('bioturismo')?>"><b style="color:  #FDFEFE">Bioturismo</b></a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" href="<?=Base_url('categorias_e')?>"><b style="color:  #FDFEFE">Categorias</b></a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="<?=Base_url('publicar_plan')?>"><b style="color:  #FDFEFE">Publicar</b></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="<?=Base_url('catalogo')?>"><b style="color:  #FDFEFE">Mi catalogo</b></a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <b style="color:  #FDFEFE"> Servicios</b></a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="<?=Base_url('mis_solicitudes')?>">Mis solicitudes</a>
+          <a class="dropdown-item" href="#">Mis servicios</a>
+        </div>
       </li>
       </ul>
     
@@ -55,7 +66,6 @@ session_start();
           </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="#"><?php echo $nombre;?></a>
-          <a class="dropdown-item" href="#">Chat</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="<?=Base_url('salir')?>">Cerrar sesión</a>
         </div>

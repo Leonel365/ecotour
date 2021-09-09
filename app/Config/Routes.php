@@ -85,3 +85,5 @@ $routes->get('lugar_t/(:num)', 'Planes_turisticos::mostrar_lugar_t/$1');
 $routes->get('lugar_e/(:num)', 'Planes_turisticos::mostrar_lugar_e/$1');
 $routes->get('reserva/(:num)', 'Planes_turisticos::agendar/$1');
 $routes->post('buscar_oferta', 'Home::buscar_oferta');
+$routes->get('mis_lugares', 'Home::mis_lugares');
+$routes->get('mis_solicitudes', 'Home::mis_solicitudes');

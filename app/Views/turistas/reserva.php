@@ -1,8 +1,11 @@
 <?=$cabecera?>
-<p><br><br><br></p>
+<p><br><br><br><br></p>
 <form method="post" action="<?=Base_url('buscar_oferta')?>" enctype="multipart/form-data">
 
   <div class="form-row align-items-center">
+    <div class="col-2">
+
+    </div>
       <div class="col-2">
       <label  for="inlineFormInput">¿Cúando voy? *:</label>
       </div>
@@ -25,4 +28,5 @@
     </div>
   </div>
 </form>
+<p><br><br><br><br><br></p>
 <?=$pie?>

@@ -24,6 +24,9 @@
       <li class="nav-item">
         <a class="nav-link" href="<?=Base_url('biotour')?>"><b style="color:  #FDFEFE">Bioturismo</b></a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<?=Base_url('categorias')?>"><b style="color:  #FDFEFE">Categorias</b></a>
+      </li>
       </ul>
      
     <form class="d-flex"  method="post" action="<?=Base_url('buscar_pn')?>" enctype="multipart/form-data">

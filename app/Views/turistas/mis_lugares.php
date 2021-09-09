@@ -4,12 +4,6 @@ use App\Models\turista;
 session_start();
 
   $correo = $_SESSION['usuario'];
-  $turista = new Turista();
-  $datos = $turista->where('usuario',$correo)->findAll();
-
-  foreach($datos as $libro ):
-    $nombre=$libro['primer_nombe'];   
-  endforeach;
 
 $db = \Config\Database::connect();
 
@@ -23,11 +17,28 @@ $db = \Config\Database::connect();
  foreach ($results as $row)
      {
 
-     $nombre = $row['nombre'];
-     $descripcion = $row['descripcion'];
+     $id_plan = $row['idPlan_Turistico'];
+     $fecha = $row['fecha_ida'];
+     $presupuesto = $row['presupuesto'];
+     
+     $sql3 = "SELECT idLugar_Turistico FROM plan_turistico WHERE idLugar_Turistico = $id_plan";
+     $query = $db->query($sql3);
+     $resultado = $query->getResultArray();
+     foreach ($resultado as $row)
+     {
      $id_lugar = $row['idLugar_Turistico'];
+     }
+
+     $sql3 = "SELECT idLugar_Turistico, nombre, descripcion FROM lugar_turistico WHERE  idLugar_Turistico = $id_lugar";
+     $query = $db->query($sql3);
+     $resultado = $query->getResultArray();
+     foreach ($resultado as $row)
+     {
+        $nombre = $row['nombre'];
+        $descripcion = $row['descripcion'];
+     }
+
      $sql3 = "SELECT fotografia FROM catalogo_lugares WHERE idLugar_Turistico = $id_lugar";
-  
      $query = $db->query($sql3);
      $resultado = $query->getResultArray();
      foreach ($resultado as $row)
@@ -48,6 +59,8 @@ $db = \Config\Database::connect();
    <a href="<?=Base_url('lugar_t/'.$id_lugar)?>"><img src="<?=base_url()?>/fotografias/<?=$foto?>" class="card-img-top"  height="150" width="235" alt="portada del libro"></a>
          <div class="card-body">
       <?php   echo "<p style = 'text-align: justify'>".substr($descripcion, 0, 100)."...</p>"; ?>
+      <?php   echo "<p style = 'text-align: justify'><b>Fecha de viaje:</b> ".$fecha."</p>"; ?>
+      <?php   echo "<p style = 'text-align: justify'><b>Presupuesto planeado:</b>  ".$presupuesto."</p>"; ?>
          </div>
          </div>
      

@@ -89,7 +89,7 @@ class Turistas extends Controller{
 	
 		$datos['sql'] = "SELECT idLugar_Turistico, nombre, descripcion FROM lugar_turistico WHERE categoria LIKE '$categoria' ";
 		
-    
+        $datos['cabecera'] = view('template/menu_turista');
 		$datos['pie'] = view('template/footer');
 		return view('turistas/mostrar_cat', $datos);
  

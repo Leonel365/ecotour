@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
@@ -25,7 +28,7 @@ session_start();
 
 ?>
 <nav class="navbar navbar-expand-lg navbar-light"  style="background-color: #36907A">
-  <a class="navbar-brand logo" href="<?=Base_url('menu_turista')?>"><img src="<?=base_url()?>/fotografias/logo.png" alt="EcoTour"  width="85" height="85"></a>
+  <a class="navbar-brand logo" href="<?=Base_url('menu_turista')?>"><img src="<?=base_url()?>/fotografias/logo.png" alt="EcoTour"  width="55" height="55"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -36,6 +39,15 @@ session_start();
       </li>
       <li class="nav-item">
         <a class="nav-link" href="<?=Base_url('biotour_t')?>"><b  style="color:  #FDFEFE">Bioturismo</b></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<?=Base_url('categorias_t')?>"><b style="color:  #FDFEFE">Categorias</b></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<?=Base_url('mis_lugares')?>"><b  style="color:  #FDFEFE">Mis lugares</b></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<?=Base_url('#')?>"><b  style="color:  #FDFEFE">Mis Ofertas</b></a>
       </li>
       </ul>
     
@@ -49,7 +61,6 @@ session_start();
           </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="#"><?php echo $nombre;?></a>
-          <a class="dropdown-item" href="#">Chat</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="<?=Base_url('salir')?>">Cerrar sesión</a>
         </div>
